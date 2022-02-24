@@ -23,7 +23,7 @@ class BookmarksController < ApplicationController
   def update
     @bookmark = Bookmark.find(params[:id])
     if @bookmark.update(bookmark_params) #this will already save your nested project along with the bookmark
-      redirect_to @bookmark
+      redirect_to list_path
     else
       render :edit
     end
