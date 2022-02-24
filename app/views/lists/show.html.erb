@@ -29,35 +29,37 @@
   </div>
 </div>
 
-<div class="d-flex flex-row">
-<div class="container">
-  <h2><%= @list.name %></h2>
-  <div class="row">
-  <ul class="list-group">
-    <% @list.bookmarks.each do |bookmark| %>
-      <div class="col-6">
-        <li class="list-group-item d-flex">
-        <div>
-          <img class="mx-auto d-block img-fluid img-thumbnail" style="max-width:80%" alt="Responsive image" src=<%= bookmark.movie.poster_url  %>>
-        </div>
-          <div class="col-6">
-            <h3 class="border-bottom"><%= bookmark.movie.title %></h3>
-            <p>Comment:<br><%= bookmark.comment %></p>
+<div class="d-flex">
+  <div class="container">
+    <h2><%= @list.name %></h2>
+    <div class="row">
+    <ul class="list-group">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="col-6">
+          <li class="list-group-item d-flex">
+          <div>
+            <img class="mx-auto d-block img-fluid img-thumbnail" style="max-width:80%" alt="Responsive image" src=<%= bookmark.movie.poster_url  %>>
           </div>
-        </li>
-         <li class="list-group-item">
-            <%= link_to "Remove",
-                        bookmark_path(bookmark), class: "btn border",
-                        method: :delete,
-                        data: { confirm: "Are you sure?" } %>
+            <div class="col-6">
+              <h3 class="border-bottom"><%= bookmark.movie.title %></h3>
+              <p>Comment:<br><%= bookmark.comment %></p>
+            </div>
           </li>
-      </div>
-    <% end %>
-  </ul>
+          <li class="list-group-item">
+              <%= link_to "Remove",
+                          bookmark_path(bookmark), class: "btn border",
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %>
+            </li>
+        </div>
+      <% end %>
+    </ul>
+    </div>
   </div>
-</div>
 
-<div class="container" style= "display: block">
- <%= link_to "Add movies!", new_list_bookmark_path(@list), class: "btn btn-flat"%>
-</div>
+  <div class="d-flex">
+    <div>
+      <%= link_to "Add movies!", new_list_bookmark_path(@list), class: "btn btn-flat"%>
+    </div>
+  </div>
 </div>
