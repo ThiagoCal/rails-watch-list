@@ -42,7 +42,7 @@
   <div class="d-flex justify-content-around p-3">
   <% @lists.each do |list| %>
     <div class="card"  style="width: 18rem;">
-      <img class="card-img-top" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACxCAMAAAAh3/JWAAAAJFBMVEVXGEX/wwCQDD7HADn/VzNhFkSTCz6mCTzEADntQTX/UTP/tw3A/2VnAAABBUlEQVR4nO3QSQHAIBAEsOUoLeDfbz3MO5GQqtCzeuYdmW/PzLktlN7IkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkSNHjhw5cuTIkZP4Ad3Qo7/AUXevAAAAAElFTkSuQmCC" alt=<%= list.name %>>
+      <%= cl_image_tag list.photo.key, class:"card-img-top", alt: list.name,  crop: :fill %>
       <div class="card-body">
         <p class="card-text"><%= list.name %></p>
       </div>
@@ -50,4 +50,5 @@
     </div>
   <% end %>
   </div>
+
 </div>

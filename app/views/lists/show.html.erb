@@ -28,10 +28,14 @@
     </div>
   </div>
 </div>
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.photo.key %>')">
+  <div class="container">
+    <h1 class="text-center"><%= @list.name %></h1>
+  </div>
+</div>
 <div>
     <div class="container p-3">
-      <h2><%= @list.name %></h2>
+
     </div>
   <div class="container">
     <div class="row">
