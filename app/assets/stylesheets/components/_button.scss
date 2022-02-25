@@ -39,3 +39,22 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-blue {
+  background: #0F60C4;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-delete {
+  background: #c4330f;
+  opacity: 0.4;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-delete:hover {
+  background: #c4330f;
+  color: white;
+  opacity: 1;
+}
