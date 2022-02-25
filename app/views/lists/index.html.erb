@@ -34,15 +34,15 @@
   <div class="container">
     <h1>Listomovies!</h1>
     <p>Create your own favorite movies lists!</p>
-    <a class="btn btn-flat" <%= link_to "Create your list now!", new_list_path %>> </a>
+    <%= link_to "Create your list now!", new_list_path, class:"btn btn-flat" %>
   </div>
 </div>
 
 <div class=" mt-5">
   <div class="d-flex justify-content-around p-3">
   <% @lists.each do |list| %>
-    <div class="card"  style="width: 18rem;">
-      <%= cl_image_tag list.photo.key, class:"card-img-top", alt: list.name,  crop: :fill %>
+    <div class="card rounded-top"  style="width: 18rem;">
+      <%= cl_image_tag list.photo.key, class:"rounded-top card-img-top border-bottom", alt: list.name %>
       <div class="card-body">
         <p class="card-text"><%= list.name %></p>
       </div>
