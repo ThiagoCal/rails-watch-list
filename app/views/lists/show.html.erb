@@ -63,8 +63,11 @@
       </ul>
       <div class="col-3">
         <%= link_to "Add movies!", new_list_bookmark_path(@list), class: "btn btn-flat"%>
+
+      </div>
+      <div class="col-2">
         <%= link_to "Remove List",
-                            list_path(@list), class: "btn btn-delete",
+                            list_path(@list), class: "btn btn-delete", style: "font-size: small;",
                             method: :delete,
                             data: { confirm: "Are you sure?" } %>
       </div>
